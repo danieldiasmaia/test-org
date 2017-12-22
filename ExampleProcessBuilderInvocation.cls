@@ -6,7 +6,7 @@ public with sharing class ExampleProcessBuilderInvocation {
 	@InvocableMethod(label='Inform Contacts on Opportunity Won' description='Sends one email to each contact of a given account informing the civen opportunity was closed')
 	public static void informContatsOnOpportunityWon(List<Opportunity> opportunitieList){
 
-		List<Id> accountIdList = new List<Id>();
+		List<Id> accountId = new List<Id>();
 
 		for(Opportunity oppty : opportunitieList){
 			accountIdList.add(oppty.accountId);
